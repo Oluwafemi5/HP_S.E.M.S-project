@@ -1,0 +1,58 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/event.css">
+    <title>Event Catalog</title>
+</head>
+<body>
+    <h1>Event Catalog</h1>
+    <div class="filter-container">
+        <label for="filter" style="margin-left: 20%;">Filter by Event Title:</label>
+        <input type="text" id="filter" placeholder="Enter event title...">
+    </div>
+    <table id="eventsTable">
+        <caption>Event Catalog</caption>
+        <thead>
+            <tr>
+                <th>S/N</th>
+                <th onclick="sortTable(1)">Event Date</th>
+                <th onclick="sortTable(2)">Event Title</th>
+                <th>Event Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>2024-08-15</td>
+                <td>Annual Gala</td>
+                <td class="ellipsis">A grand evening of celebration with awards and dinner. This is a longer description that should be truncated with an ellipsis when it overflows.</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>2024-09-10</td>
+                <td>Tech Conference</td>
+                <td class="ellipsis">A conference showcasing the latest in technology and innovation. This description is also quite lengthy and should be truncated.</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>2024-10-05</td>
+                <td>Charity Auction</td>
+                <td class="ellipsis">An auction event to raise funds for various charities. The description will be truncated to fit within the container.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="button-container">
+        <button id="submitButton">SUBMIT</button>
+        <button id="updateButton"><a href="update.html">UPDATE</a></button>
+        <button id="deleteButton"><a href="delete.html">DELETE</a></button>
+    </div>
+
+    <!-- Link to the external JavaScript file -->
+    <script src="static/event.js"></script>
+</body>
+</html>
